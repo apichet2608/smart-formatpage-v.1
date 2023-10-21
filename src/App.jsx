@@ -19,12 +19,12 @@ import ListItemText from "@mui/material/ListItemText";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Fuji from "../public/Fuji.png";
 import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
-import PageCostTotal from "./Page-Format/main/page-format.jsx";
+import Page from "./Pages/Page-Format/main/page-format.jsx";
 import Pic1 from "../public/icon/icons8-donate-48.png";
 import Pic2 from "../public/icon/icons8-money-box-48.png";
 import Pic3 from "../public/icon/icons8-money-bag-48.png";
 import PageTitle from "./location";
-
+import Pages from "./Pages/Page-2/main/page";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -256,8 +256,8 @@ export default function MiniDrawer() {
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
           <Routes>
-            <Route path="/" element={<PageCostTotal />} />
-            <Route path="/page/page" element={<PageCostTotal />} />
+            <Route path="/" element={<Page />} />
+            <Route path="/page/page" element={<Pages />} />
           </Routes>
         </Box>
       </Box>

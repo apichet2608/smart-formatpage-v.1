@@ -36,7 +36,7 @@ const Page1 = () => {
         {/* <h1>Welcome to Real Time Parametor Dashboard</h1> */}
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <>test</>
+            <div className="bg-blue mx-auto">test</div>
           </Grid>
         </Grid>
         {/* <h4>Overall Energy Monitoring</h4> */}

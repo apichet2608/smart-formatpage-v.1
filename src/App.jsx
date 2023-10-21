@@ -256,7 +256,7 @@ export default function MiniDrawer() {
           <DrawerHeader />
           <Routes>
             <Route path="/" element={<PageCostTotal />} />
-            <Route path="/page" element={<PageCostTotal />} />
+            <Route path="/page/page" element={<PageCostTotal />} />
           </Routes>
         </Box>
       </Box>

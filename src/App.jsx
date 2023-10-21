@@ -103,6 +103,7 @@ export default function MiniDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
   return (
     <Router>
       <Box sx={{ display: "flex" }}>

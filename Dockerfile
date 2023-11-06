@@ -15,7 +15,7 @@ FROM nginx:stable-alpine
 # คัดลอกไฟล์ production build จากขั้นตอนก่อนหน้า
 COPY --from=0 /app/dist /usr/share/nginx/html
 # คัดลอกไฟล์ nginx.conf ไปยังไดเรกทอรี /etc/nginx/conf.d/
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY /Config/nginx/Docker/Window/nginx.conf /etc/nginx/conf.d/default.conf
 # สำหรับการสื่อสารกับแอปพลิเคชัน React ที่ทำงานใน Docker container
 EXPOSE 80
 # รัน Nginx

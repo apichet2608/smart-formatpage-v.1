@@ -1,2 +1,3 @@
-# smart-formatpage-v.1
- V1
+Smart Format Page
+npm install
+npm run dev

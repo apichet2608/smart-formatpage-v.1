@@ -22,20 +22,6 @@ const Page1 = () => {
         lg: 1280, // breakpoint lg
         xl: 1900, // breakpoint xl
       },
-      palette: {
-        primary: {
-          light: "#757ce8",
-          main: "#3f50b5",
-          dark: "#002884",
-          contrastText: "#fff",
-        },
-        secondary: {
-          light: "#ff7961",
-          main: "#f44336",
-          dark: "#ba000d",
-          contrastText: "#000",
-        },
-      },
     },
   });
 
@@ -46,24 +32,24 @@ const Page1 = () => {
         {/* <h1>Welcome to Real Time Parametor Dashboard</h1> */}
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className="bg-blue mx-auto">
+            <div className=" bg-blue-400 mx-auto">
               <Item>test</Item>
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className="bg-blue mx-auto">
+            <div className=" bg-blue-400 mx-auto">
               {" "}
               <Item>test</Item>
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className="bg-blue mx-auto">
+            <div className=" bg-blue-400 mx-auto">
               {" "}
               <Item>test</Item>
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className="bg-blue mx-auto">
+            <div className=" bg-blue-400 mx-auto">
               {" "}
               <Item>test</Item>
             </div>

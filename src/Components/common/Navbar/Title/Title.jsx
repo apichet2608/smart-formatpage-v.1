@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import { NavLink, useLocation } from "react-router-dom";
 
-export default function MiniDrawer() {
+export default function Title() {
   const location = useLocation();
   const [pageTitle, setPageTitle] = useState("");
 
@@ -11,17 +11,16 @@ export default function MiniDrawer() {
       switch (location.pathname) {
         case "/":
           return "Page";
-        case "/page/page":
+        case "/page":
           return "Page";
-        case "/page/page2":
+        case "/page2":
           return "Page2";
-        case "/page/page3":
+        case "/page3":
           return "Page3";
         default:
           return "";
       }
     };
-    // /page/print
     const title = getPageTitle();
     setPageTitle(title);
   }, [location.pathname]);

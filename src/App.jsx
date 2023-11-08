@@ -16,7 +16,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function MiniDrawer() {
   return (
     <Router>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "fixed" }}>
         <Navbar />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />

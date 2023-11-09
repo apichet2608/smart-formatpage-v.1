@@ -17,11 +17,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import FujiLogo from "../../../../public/Fuji.png";
-import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
 import Icon1 from "../../../../public/icon/icons8-donate-48.png";
 import Icon2 from "../../../../public/icon/icons8-money-box-48.png";
 import Icon3 from "../../../../public/icon/icons8-money-bag-48.png";
 import PageTitle from "./Title/Title";
+import Navbuttton from "./Button/Navbuttton";
 // import Pages from "./Pages/Page-2/main/page";
 const drawerWidth = 240;
 
@@ -93,6 +93,22 @@ const Drawer = styled(MuiDrawer, {
 export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [activeButton, setActiveButton] = React.useState(null);
+
+  //sidebar items
+  const sidebarItems = [
+    { name: "Smart Man Working Input", link: "/Page-Demo", icon: Icon1 },
+    { name: "Smart Man Working Record", link: "/", icon: Icon2 },
+    { name: "Smart Man Working Plan", link: "/", icon: Icon3 },
+    // Add more sidebar items as needed
+  ];
+
+  //handle button click
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+    // const formattedButtonName = buttonName.replace(/ /g, "_");
+    // router.push(`/${formattedButtonName}`);
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -157,96 +173,12 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        {open ? (
-          <ListItem disablePadding sx={{ display: "block", mt: 1, pl: 1 }}>
-            <ListItemText
-              primary={
-                <Typography
-                  component="div"
-                  variant="subtitle2"
-                  fontWeight="bold"
-                  sx={{
-                    opacity: open ? 1 : 0,
-                    color: "#616161",
-                    fontFamily: "Arial, sans-serif",
-                    fontSize: "16px",
-                  }}
-                >
-                  Title
-                </Typography>
-              }
-            />
-          </ListItem>
-        ) : null}
-        <List>
-          {["Page", "Page2", "Page3"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-                component={Link}
-                to={`/${text.toLowerCase().split(" ").join("-")}`}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {text === "Page" ? (
-                    <img
-                      style={{ width: "24px", height: "24px" }}
-                      src={Icon1}
-                    />
-                  ) : text === "Page2" ? (
-                    <img
-                      style={{ width: "24px", height: "24px" }}
-                      src={Icon2}
-                    />
-                  ) : text === "Page3" ? (
-                    <img
-                      style={{ width: "24px", height: "24px" }}
-                      src={Icon3}
-                    />
-                  ) : text === "4" ? (
-                    <StackedLineChartIcon />
-                  ) : (
-                    <StackedLineChartIcon />
-                  )}
-                </ListItemIcon>
-                {/* <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} /> */}
-                <ListItemText
-                  primary={
-                    <Typography
-                      component="div"
-                      variant="subtitle2"
-                      fontWeight="bold"
-                      sx={{
-                        opacity: open ? 1 : 0,
-                        color: "#616161",
-                        fontFamily: "Arial, sans-serif",
-                        fontSize: "16px",
-                        // fontSize: 15,
-                        // fontWeight: "medium",
-                        lineHeight: "20px",
-                        mb: "2px",
-                        // textOverflow: "ellipsis",
-                        // whiteSpace: "nowrap",
-                        // overflow: "hidden",
-                      }}
-                    >
-                      {text}
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        <Navbuttton
+          open={open}
+          sidebarItems={sidebarItems}
+          handleButtonClick={handleButtonClick}
+          activeButton={activeButton}
+        />
         <Divider />
       </Drawer>
     </>

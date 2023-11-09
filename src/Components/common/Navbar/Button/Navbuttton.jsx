@@ -51,6 +51,8 @@ function Navbuttton({ open, sidebarItems, activeButton, handleButtonClick }) {
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
                 bgcolor: activeButton === text.name ? "#42a5f5" : "transparent",
+                m: 0.5,
+                borderRadius: "10px",
               }}
               component={Link}
               to={`${text.link.toLowerCase().split(" ").join("-")}`}

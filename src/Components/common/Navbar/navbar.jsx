@@ -22,6 +22,7 @@ import Icon2 from "../../../../public/icon/icons8-money-box-48.png";
 import Icon3 from "../../../../public/icon/icons8-money-bag-48.png";
 import PageTitle from "./Title/Title";
 import Navbuttton from "./Button/Navbuttton";
+import { NavLink, useLocation } from "react-router-dom";
 // import Pages from "./Pages/Page-2/main/page";
 const drawerWidth = 240;
 
@@ -94,12 +95,12 @@ export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [activeButton, setActiveButton] = React.useState(null);
-
+  const location = useLocation();
   //sidebar items
   const sidebarItems = [
-    { name: "Smart Man Working Input", link: "/Page-Demo", icon: Icon1 },
-    { name: "Smart Man Working Record", link: "/", icon: Icon2 },
-    { name: "Smart Man Working Plan", link: "/", icon: Icon3 },
+    { name: "MainPage", link: "/", icon: Icon1 },
+    { name: "Page1", link: "/page", icon: Icon2 },
+    { name: "Page2", link: "/page1", icon: Icon3 },
     // Add more sidebar items as needed
   ];
 
@@ -109,6 +110,24 @@ export default function MiniDrawer() {
     // const formattedButtonName = buttonName.replace(/ /g, "_");
     // router.push(`/${formattedButtonName}`);
   };
+
+  React.useEffect(() => {
+    const getPageTitle = () => {
+      switch (location.pathname) {
+        case "/":
+          return "MainPage";
+        case "/page":
+          return "Page1";
+        case "/page1":
+          return "Page2";
+
+        default:
+          return "";
+      }
+    };
+    const title = getPageTitle();
+    setActiveButton(title);
+  }, [location.pathname]);
 
   const handleDrawerOpen = () => {
     setOpen(true);

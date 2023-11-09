@@ -10,13 +10,12 @@ export default function Title() {
     const getPageTitle = () => {
       switch (location.pathname) {
         case "/":
-          return "Page";
+          return "MainPage";
         case "/page":
-          return "Page";
-        case "/page2":
+          return "Page1";
+        case "/page1":
           return "Page2";
-        case "/page3":
-          return "Page3";
+
         default:
           return "";
       }

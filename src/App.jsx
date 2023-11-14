@@ -18,13 +18,15 @@ export default function MiniDrawer() {
     <Router>
       <Box sx={{ display: "fixed" }}>
         <Navbar />
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <DrawerHeader />
-          <Routes>
-            <Route path="/" element={<PageFormat1 />} />
-            <Route path="/page" element={<PageFormat1 />} />
-          </Routes>
-        </Box>
+        <div className="container mx-auto">
+          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <DrawerHeader />
+            <Routes>
+              <Route path="/" element={<PageFormat1 />} />
+              <Route path="/page" element={<PageFormat1 />} />
+            </Routes>
+          </Box>
+        </div>
       </Box>
     </Router>
   );

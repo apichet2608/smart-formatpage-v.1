@@ -16,11 +16,11 @@ const Page1 = () => {
   const theme = createTheme({
     breakpoints: {
       values: {
-        xs: 0, // breakpoint xs
-        sm: 600, // breakpoint sm
-        md: 960, // breakpoint md
-        lg: 1280, // breakpoint lg
-        xl: 1900, // breakpoint xl
+        xs: 640, // breakpoint xs
+        sm: 768, // breakpoint sm
+        md: 1024, // breakpoint md
+        lg: 1488, // breakpoint lg
+        xl: 1872, // breakpoint xl
       },
     },
   });

@@ -23,6 +23,9 @@ import Icon3 from "../../../../public/icon/icons8-money-bag-48.png";
 import PageTitle from "./Title/Title";
 import Navbuttton from "./Button/Navbuttton";
 import { NavLink, useLocation } from "react-router-dom";
+import ToggleDarkmode from "../toggleDarkMode/toggleDarkMode";
+import Box from "@mui/material/Box";
+
 // import Pages from "./Pages/Page-2/main/page";
 const drawerWidth = 240;
 
@@ -91,14 +94,14 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer() {
+export default function MiniDrawer({ isDarkMode }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [activeButton, setActiveButton] = React.useState(null);
   const location = useLocation();
   //sidebar items
   const sidebarItems = [
-    { name: "MainPage", link: "/", icon: Icon1 },
+    { name: "RLSB-R2-36-62", link: "/RLSB-R2-36-62", icon: Icon1 },
     { name: "Page1", link: "/page", icon: Icon2 },
     { name: "Page2", link: "/page1", icon: Icon3 },
     // Add more sidebar items as needed
@@ -114,8 +117,8 @@ export default function MiniDrawer() {
   React.useEffect(() => {
     const getPageTitle = () => {
       switch (location.pathname) {
-        case "/":
-          return "MainPage";
+        case "/rlsb-r2-36-62":
+          return "RLSB-R2-36-62";
         case "/page":
           return "Page1";
         case "/page1":
@@ -143,7 +146,9 @@ export default function MiniDrawer() {
       <AppBar
         position="fixed"
         open={open}
-        // sx={{ backgroundColor: "#42a5f5" }}
+        sx={{
+          backgroundColor: isDarkMode ? "#121212" : "#42a5f5",
+        }}
       >
         <Toolbar>
           <IconButton
@@ -159,6 +164,8 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <PageTitle />
+          <Box sx={{ flexGrow: 1 }} />
+          <ToggleDarkmode />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -166,7 +173,7 @@ export default function MiniDrawer() {
         open={open}
         sx={{
           "& .MuiDrawer-paper": {
-            // backgroundColor: "#fafafa",
+            backgroundColor: isDarkMode ? "#fafafa" : "#fafafa",
           },
         }}
       >
@@ -197,6 +204,7 @@ export default function MiniDrawer() {
           sidebarItems={sidebarItems}
           handleButtonClick={handleButtonClick}
           activeButton={activeButton}
+          isDarkMode={isDarkMode}
         />
         <Divider />
       </Drawer>

@@ -17,7 +17,13 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-function Navbuttton({ open, sidebarItems, activeButton, handleButtonClick }) {
+function Navbuttton({
+  open,
+  sidebarItems,
+  activeButton,
+  handleButtonClick,
+  isDarkMode,
+}) {
   return (
     <div>
       {" "}
@@ -50,7 +56,12 @@ function Navbuttton({ open, sidebarItems, activeButton, handleButtonClick }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
-                bgcolor: activeButton === text.name ? "#42a5f5" : "transparent",
+                bgcolor:
+                  activeButton === text.name
+                    ? isDarkMode
+                      ? "#E0E4E5"
+                      : "#42a5f5"
+                    : "transparent",
                 m: 0.5,
                 borderRadius: "10px",
               }}

@@ -20,8 +20,12 @@ export default function MiniDrawer() {
 
   return (
     <div
-      style={{ backgroundColor: isDarkMode ? "#E0E4E5" : "#FFFFFF" }}
-      className="h-screen"
+      style={{
+        backgroundColor: isDarkMode ? "#E0E4E5" : "#FFFFFF",
+        height: "100%",
+        minHeight: "100vh",
+      }}
+      // className="h-screen"
     >
       <Router>
         <Box

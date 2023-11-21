@@ -40,7 +40,7 @@ export default function MiniDrawer() {
                   element={<PageFormat1 isDarkMode={isDarkMode} />}
                 />
                 <Route
-                  path="/rlsb-r2-36-62"
+                  path="/page"
                   element={<PageFormat1 isDarkMode={isDarkMode} />}
                 />
               </Routes>

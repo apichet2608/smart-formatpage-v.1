@@ -9,8 +9,6 @@ export default function Title() {
   useEffect(() => {
     const getPageTitle = () => {
       switch (location.pathname) {
-        case "/rlsb-r2-36-62":
-          return "RLSB-R2-36-62";
         case "/page":
           return "Page1";
         case "/page1":

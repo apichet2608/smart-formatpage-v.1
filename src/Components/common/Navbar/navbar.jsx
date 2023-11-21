@@ -101,7 +101,6 @@ export default function MiniDrawer({ isDarkMode }) {
   const location = useLocation();
   //sidebar items
   const sidebarItems = [
-    { name: "RLSB-R2-36-62", link: "/RLSB-R2-36-62", icon: Icon1 },
     { name: "Page1", link: "/page", icon: Icon2 },
     { name: "Page2", link: "/page1", icon: Icon3 },
     // Add more sidebar items as needed
@@ -117,8 +116,6 @@ export default function MiniDrawer({ isDarkMode }) {
   React.useEffect(() => {
     const getPageTitle = () => {
       switch (location.pathname) {
-        case "/rlsb-r2-36-62":
-          return "RLSB-R2-36-62";
         case "/page":
           return "Page1";
         case "/page1":

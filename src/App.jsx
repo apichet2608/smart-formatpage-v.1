@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageFormat1 from "./Pages/Page-Format/main/page-format.jsx";
 import Navbar from "./Components/common/Navbar/navbar.jsx";
 import { useDarkMode } from "./Components/common/DarkModeContext/DarkModeContext.jsx";
-
+import { useLocation } from "react-router-dom";
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -17,6 +17,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function MiniDrawer() {
   const { isDarkMode } = useDarkMode();
   const theme = useTheme();
+  const location = useLocation();
 
   return (
     <div
@@ -27,7 +28,7 @@ export default function MiniDrawer() {
       }}
       // className="h-screen"
     >
-      <Router>
+      <>
         <Box
           sx={{
             display: "fixed",
@@ -51,7 +52,7 @@ export default function MiniDrawer() {
             </div>
           </Box>
         </Box>
-      </Router>
+      </>
     </div>
   );
 }

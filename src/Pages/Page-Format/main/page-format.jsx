@@ -12,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const Page1 = () => {
+const Page1 = ({ isDarkMode }) => {
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -32,26 +32,12 @@ const Page1 = () => {
         {/* <h1>Welcome to Real Time Parametor Dashboard</h1> */}
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className=" bg-blue-400 mx-auto">
-              <Item>test</Item>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className=" bg-blue-400 mx-auto">
-              {" "}
-              <Item>test</Item>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className=" bg-blue-400 mx-auto">
-              {" "}
-              <Item>test</Item>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-            <div className=" bg-blue-400 mx-auto">
-              {" "}
-              <Item>test</Item>
+            <div
+              className={`  mx-auto ${
+                isDarkMode ? `bg-slate-400` : `bg-blue-400`
+              }`}
+            >
+              <>test</>
             </div>
           </Grid>
         </Grid>

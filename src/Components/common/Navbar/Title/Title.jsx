@@ -11,8 +11,6 @@ export default function Title() {
       switch (location.pathname) {
         case "/page":
           return "Page1";
-        case "/page1":
-          return "Page2";
 
         default:
           return "";

@@ -3,23 +3,14 @@ import { styled, useTheme } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
-import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import FujiLogo from "../../../../public/Fuji.png";
-import Icon1 from "../../../../public/icon/icons8-donate-48.png";
-import Icon2 from "../../../../public/icon/Page1/icons8-money-box-48.png";
-import Icon3 from "../../../../public/icon/Page2/icons8-money-bag-48.png";
+import Icon1 from "../../../../public/icon/Page1/icons8-donate-48.png";
 import PageTitle from "./Title/Title";
 import Navbuttton from "./Button/Navbuttton";
 import { NavLink, useLocation } from "react-router-dom";
@@ -101,8 +92,7 @@ export default function MiniDrawer({ isDarkMode }) {
   const location = useLocation();
   //sidebar items
   const sidebarItems = [
-    { name: "Page1", link: "/page", icon: Icon2 },
-    { name: "Page2", link: "/page1", icon: Icon3 },
+    { name: "Page1", link: "/page", icon: Icon1 },
     // Add more sidebar items as needed
   ];
 
@@ -118,8 +108,6 @@ export default function MiniDrawer({ isDarkMode }) {
       switch (location.pathname) {
         case "/page":
           return "Page1";
-        case "/page1":
-          return "Page2";
 
         default:
           return "";

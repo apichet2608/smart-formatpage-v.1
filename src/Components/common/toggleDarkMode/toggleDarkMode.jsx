@@ -1,7 +1,6 @@
 import React from "react";
 import { useDarkMode } from "../DarkModeContext/DarkModeContext";
-import moon from "../../../../public/icon/half-moon.png";
-import clound from "../../../../public/icon/cloudy.png";
+
 import "./toggleDarkMode.css";
 const DarkModeToggle = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();

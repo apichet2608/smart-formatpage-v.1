@@ -86,6 +86,7 @@ function TableCheck({ Datas, isDarkMode }) {
         rows={Datas}
         columns={columns}
         pageSize={5}
+        disableRowSelectionOnClick
         // getRowHeight={() => "auto"}
         slots={{
           toolbar: GridToolbar,

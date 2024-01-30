@@ -1,0 +1,17 @@
+--> https://fontsource.org/
+
+--> npm install @fontsource/merriweather
+--> import '@fontsource/merriweather'; // app.js File
+
+Case 1
+--> style or sx = {{  fontFamily: "Merriweather, sans-serif" }}
+
+Case 2
+--> tailwindCSS |   
+                |-->  open : tailwind.config.js
+                |-->  Add  : fontFamily: {
+                |                           Merriweather: ["Merriweather", "sans-serif"],
+                |                           .....
+                |                       },
+                |
+                |--> Use   : <div className="font-Merriweather">Some Text</div>

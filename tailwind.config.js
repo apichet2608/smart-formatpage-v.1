@@ -71,6 +71,9 @@ export default {
         "2xl": "2rem",
       },
     },
+    fontFamily: {
+      Merriweather: ["Poppins", "sans-serif"],
+    },
   },
   plugins: [require("daisyui")],
 

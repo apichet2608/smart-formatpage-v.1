@@ -6,3 +6,48 @@
 .swal2-container.swal2-noanimation {
   z-index: 11000;
 }
+
+.Poppins-fonts-100 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+
+.Poppins-fonts-200 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.Poppins-fonts-300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.Poppins-fonts-400 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.Poppins-fonts-500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.Poppins-fonts-600 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.Poppins-fonts-700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.Poppins-fonts-800 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+.Poppins-fonts-900 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}

@@ -6,6 +6,17 @@ import PageFormat1 from "./Pages/Page-Format/main/page-format.jsx";
 import Navbar from "./Components/common/Navbar/navbar.jsx";
 import { useDarkMode } from "./Components/common/DarkModeContext/DarkModeContext.jsx";
 import { useLocation } from "react-router-dom";
+import "animate.css";
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
+
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",

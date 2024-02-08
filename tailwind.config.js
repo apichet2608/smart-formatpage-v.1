@@ -72,7 +72,7 @@ export default {
       },
     },
     fontFamily: {
-      Merriweather: ["Poppins", "sans-serif"],
+      Poppins: ["Poppins", "sans-serif"],
     },
   },
   plugins: [require("daisyui")],
